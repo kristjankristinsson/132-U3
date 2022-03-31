@@ -19,3 +19,14 @@ function lookStudent () {
 
   return student;
 }
+
+// Eventlistener för sök
+inputStudent.addEventListener('keyup', function () {
+    let foundStudent = lookStudent();
+    document.getElementById("results").innerHTML = "";
+    createHTML(foundStudent);
+  
+    if (inputStudent.value == ""){
+      document.getElementById("results").innerHTML = "";
+    }
+  });
