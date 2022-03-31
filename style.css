@@ -17,3 +17,61 @@ body {
 #container {
   display: flex;
 }
+
+.studentContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.larare {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 15px;
+  border: rgb(0, 0, 0) solid 2px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.ansvarig {
+  padding: 10px;
+  margin: 5px;
+  height: 60px;
+  background-color: rgb(210, 255, 106);
+  border-radius: 20px;
+  border: solid 2px rgb(100, 100, 100);
+}
+
+.studenter {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 15px;
+  border: rgb(0, 0, 0) solid 2px;
+}
+
+.kurser {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 20px;
+  border: rgb(0, 0, 0) solid 2px;
+}
+
+#results > div {
+  background-color: rgba(78, 78, 78, 0.5);
+  border: solid 2px rgb(107, 107, 107);
+  border-radius: 15px;
+  padding: 10px;
+  margin: 5px;
+}
+
+#wrapper.dark-theme {
+  background-color: black;
+  color: white;
+  border: black;
+}
+
+.klick {
+  transition: 0.1s;
+  height: 5px;
+  width: 5px;
+  display: inline-block;
+}
