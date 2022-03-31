@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Studenter</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="container">
+        <h1>Sök efter student</h1>
+        <label class="switch">
+          <div>
+            <input type="checkbox" />
+            <span class="klick">Darkmode</span>
+          </div>
+        </label>
+      </div>
+      <div id="search">
+        <label for="students-search">Search students by last name:</label>
+        <input type="search" id="sok-student" />
+      </div>
+
+      <div id="results"></div>
+    </div>
+
+    <script src="DATABASE.js"></script>
+    <script src="students.js"></script>
+  </body>
+</html>
