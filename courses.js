@@ -95,3 +95,44 @@ function skapaHTML (courses) {
         renderaKurs(course);
     }
 }
+
+// Hitta rätt student baserad på studentID:et
+function getStudentsById(course) {
+    let foundStudents = [];
+
+    for (let student of DATABASE.students) {
+        for (let studentCourse of student.courses) {
+            if (studentCourse.courseId == course.courseId) {
+                foundStudents.push(student);
+            }
+        }
+    }
+    return foundStudents;
+}
+
+
+// hitta lärarna
+function getResponsibleTeacher (course) {
+    let responsibleTeacher = [];
+
+    for (let teacher of DATABASE.teachers) {
+         if (teacher.teacherId == course.courseResponsible) {
+            responsibleTeacher.push(teacher);
+        }  
+    }
+    return responsibleTeacher;
+}
+
+
+// Lärare kopplade till kurs
+function getAllTeachers (course){
+    let allTeachers = [];
+
+    for (let teacher of DATABASE.teachers){
+        for(let oneTeacher of course.teachers)
+        if (teacher.teacherId == oneTeacher){
+            allTeachers.push(teacher);
+        }
+    }
+    return allTeachers;
+}
