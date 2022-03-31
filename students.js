@@ -1,3 +1,5 @@
+//https://github.com/kristjankristinsson/132-U3
+
 'use strict'
 
 let inputStudent = document.getElementById('sok-student');
