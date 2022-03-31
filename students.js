@@ -61,3 +61,37 @@ inputStudent.addEventListener('keyup', function () {
     }
     
 }
+
+
+// lägger till i html
+
+function createHTML (students) {
+    for (let student of students){
+        renderStudent(student);
+    }
+}
+
+function getCourseById(student) {
+    let foundCourses = [];
+
+    for (let i = 0; i < student.courses.length; i ++) {
+        foundCourses.push(DATABASE.courses.find(course => {
+            return course.courseId == student.courses[i].courseId; 
+        }))
+    }
+    return foundCourses;
+}
+
+function getStudentCourses (student) {
+    
+    let studentCourses = [];
+
+    for (let studentCourse of student.courses) {
+        for (let dbCourse of DATABASE.courses) {
+            if (studentCourse.courseId == dbCourse.courseId) {
+                studentCourses.push(studentCourse.passedCredits);
+            }
+        }
+    }
+    return studentCourses;
+}
