@@ -22,16 +22,16 @@ function lookStudent () {
 
 // Eventlistener för sök
 inputStudent.addEventListener('keyup', function () {
-    let foundStudent = lookStudent();
-    document.getElementById("results").innerHTML = "";
-    createHTML(foundStudent);
-  
-    if (inputStudent.value == ""){
-      document.getElementById("results").innerHTML = "";
-    }
-  });
+  let foundStudent = lookStudent();
+  document.getElementById("results").innerHTML = "";
+  createHTML(foundStudent);
 
-  function renderStudent (student) {
+  if (inputStudent.value == ""){
+    document.getElementById("results").innerHTML = "";
+  }
+});
+
+function renderStudent (student) {
     let results = document.getElementById("results");
     let div = document.createElement("div");
     let studentName = document.createElement("h2");
@@ -61,7 +61,6 @@ inputStudent.addEventListener('keyup', function () {
     }
     
 }
-
 
 // lägger till i html
 
@@ -109,3 +108,5 @@ themeSwitch.addEventListener('change', () => {
     body.classList.toggle("dark-theme");
 
 });
+
+
