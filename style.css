@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 10px;
+  overflow-y: scroll;
+  margin: 20;
+  height: 100vh;
+}
+
+#search {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+}
+
+#container {
+  display: flex;
+}
